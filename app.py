@@ -6,8 +6,6 @@ import joblib
 import pandas as pd
 
 app = Flask(__name__)
-model = joblib.load(open('Sentiment.pkl', 'rb'))
-
 
 @app.route('/')
 def home():
@@ -16,9 +14,6 @@ def home():
 
 @app.route('/predict_title_Category',methods=['POST'])
 def predict_expenses():
-    trxt = [str(x) for x in request.form.values()]
-    prediction = model.predict(trxt)
-    #print(Final_string)
     return render_template('index.html', prediction_text='Hello to the Flask Application!')
 
 if __name__ == "__main__":
