@@ -2,9 +2,6 @@
 # coding: utf-8
 
 from flask import Flask,render_template,request
-import joblib
-import pandas as pd
-
 app = Flask(__name__)
 
 @app.route('/')
