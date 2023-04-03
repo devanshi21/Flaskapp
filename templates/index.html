@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>YouTube title category prediction</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"> 
+  <link rel="stylesheet" type="text/css" href="back-g.css"/>
+  </head>
+
+<body style="margin-left: 35%;margin-top: 6%;background: radial-gradient(#eaf3f0, #ebfcfb);">
+  <div class="login">
+	<h1 style="margin-left: -150px;">Know your best <b>Hotel match!</b></h1>
+  <hr style="position: relative;
+  top: 20px;
+  margin-left: -150px;
+  border: none;
+  height: 12px;
+  width: 530px;
+  background: black;
+  margin-bottom: 20px;">
+      <br><br>
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict_expenses')}}"method="post">
+    	<input type="text" name="Income" placeholder="Enter your title here!" required="required" style="margin-left:-150px;font-size: 22px;width: 710px;"/><br>
+        <button type="submit" class="btn btn-primary btn-block btn-large" style="margin-left:10%;margin-top:5%;width: 200px;height: 100px;"><b>Okay</b></button>
+    </form>
+
+   <br>
+   <br>
+   
+   <h3 style="margin-left: -150px;">{{prediction_text}}</h1>
+  </div>
+ </div>
