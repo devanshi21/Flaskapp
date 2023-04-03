@@ -4,7 +4,6 @@
 from flask import Flask,render_template,request
 import joblib
 import pandas as pd
-from sklearn.preprocessing import LabelEncoder
 
 app = Flask(__name__)
 model = joblib.load(open('Sentiment.pkl', 'rb'))
